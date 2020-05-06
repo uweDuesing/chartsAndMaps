@@ -2,5 +2,167 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1, 
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "chartsAndMaps": {
+      "projectType": "library",
+      "root": "projects/charts-and-maps",
+      "sourceRoot": "projects/charts-and-maps/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/charts-and-maps/tsconfig.lib.json",
+            "project": "projects/charts-and-maps/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/charts-and-maps/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/charts-and-maps/src/test.ts",
+            "tsConfig": "projects/charts-and-maps/tsconfig.spec.json",
+            "karmaConfig": "projects/charts-and-maps/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/charts-and-maps/tsconfig.lib.json",
+              "projects/charts-and-maps/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "chartsAndMapsApp": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/chartsAndMapsApp",
+      "sourceRoot": "projects/chartsAndMapsApp/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/chartsAndMapsApp",
+            "index": "projects/chartsAndMapsApp/src/index.html",
+            "main": "projects/chartsAndMapsApp/src/main.ts",
+            "polyfills": "projects/chartsAndMapsApp/src/polyfills.ts",
+            "tsConfig": "projects/chartsAndMapsApp/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/chartsAndMapsApp/src/favicon.ico",
+              "projects/chartsAndMapsApp/src/assets"
+            ],
+            "styles": [
+              "projects/chartsAndMapsApp/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/chartsAndMapsApp/src/environments/environment.ts",
+                  "with": "projects/chartsAndMapsApp/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "chartsAndMapsApp:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "chartsAndMapsApp:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "chartsAndMapsApp:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/chartsAndMapsApp/src/test.ts",
+            "polyfills": "projects/chartsAndMapsApp/src/polyfills.ts",
+            "tsConfig": "projects/chartsAndMapsApp/tsconfig.spec.json",
+            "karmaConfig": "projects/chartsAndMapsApp/karma.conf.js",
+            "assets": [
+              "projects/chartsAndMapsApp/src/favicon.ico",
+              "projects/chartsAndMapsApp/src/assets"
+            ],
+            "styles": [
+              "projects/chartsAndMapsApp/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/chartsAndMapsApp/tsconfig.app.json",
+              "projects/chartsAndMapsApp/tsconfig.spec.json",
+              "projects/chartsAndMapsApp/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/chartsAndMapsApp/e2e/protractor.conf.js",
+            "devServerTarget": "chartsAndMapsApp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "chartsAndMapsApp:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "chartsAndMaps"
 }

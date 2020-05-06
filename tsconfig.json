@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "charts-and-maps": [
+        "dist/charts-and-maps/charts-and-maps",
+        "dist/charts-and-maps"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
