@@ -1,6 +1,7 @@
 {
   "name": "charts-and-maps",
   "version": "0.0.0",
+  "repository": "git@github.com:uweDuesing/chartsAndMaps.git",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+
   "dependencies": {
     "@angular/animations": "~9.0.7",
     "@angular/common": "~9.0.7",

@@ -1,0 +1,14 @@
+import { __decorate } from "tslib";
+import { NgModule } from '@angular/core';
+import { ChartsAndMapsComponent } from './charts-and-maps.component';
+let ChartsAndMapsModule = class ChartsAndMapsModule {
+};
+ChartsAndMapsModule = __decorate([
+    NgModule({
+        declarations: [ChartsAndMapsComponent],
+        imports: [],
+        exports: [ChartsAndMapsComponent]
+    })
+], ChartsAndMapsModule);
+export { ChartsAndMapsModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hhcnRzLWFuZC1tYXBzLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2NoYXJ0cy1hbmQtbWFwcy8iLCJzb3VyY2VzIjpbImxpYi9jaGFydHMtYW5kLW1hcHMubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxzQkFBc0IsRUFBRSxNQUFNLDZCQUE2QixDQUFDO0FBVXJFLElBQWEsbUJBQW1CLEdBQWhDLE1BQWEsbUJBQW1CO0NBQUksQ0FBQTtBQUF2QixtQkFBbUI7SUFOL0IsUUFBUSxDQUFDO1FBQ1IsWUFBWSxFQUFFLENBQUMsc0JBQXNCLENBQUM7UUFDdEMsT0FBTyxFQUFFLEVBQ1I7UUFDRCxPQUFPLEVBQUUsQ0FBQyxzQkFBc0IsQ0FBQztLQUNsQyxDQUFDO0dBQ1csbUJBQW1CLENBQUk7U0FBdkIsbUJBQW1CIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENoYXJ0c0FuZE1hcHNDb21wb25lbnQgfSBmcm9tICcuL2NoYXJ0cy1hbmQtbWFwcy5jb21wb25lbnQnO1xuXG5cblxuQE5nTW9kdWxlKHtcbiAgZGVjbGFyYXRpb25zOiBbQ2hhcnRzQW5kTWFwc0NvbXBvbmVudF0sXG4gIGltcG9ydHM6IFtcbiAgXSxcbiAgZXhwb3J0czogW0NoYXJ0c0FuZE1hcHNDb21wb25lbnRdXG59KVxuZXhwb3J0IGNsYXNzIENoYXJ0c0FuZE1hcHNNb2R1bGUgeyB9XG4iXX0=

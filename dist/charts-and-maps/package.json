@@ -1,0 +1,19 @@
+{
+  "name": "charts-and-maps",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/charts-and-maps.umd.js",
+  "module": "fesm5/charts-and-maps.js",
+  "es2015": "fesm2015/charts-and-maps.js",
+  "esm5": "esm5/charts-and-maps.js",
+  "esm2015": "esm2015/charts-and-maps.js",
+  "fesm5": "fesm5/charts-and-maps.js",
+  "fesm2015": "fesm2015/charts-and-maps.js",
+  "typings": "charts-and-maps.d.ts",
+  "metadata": "charts-and-maps.metadata.json",
+  "sideEffects": false
+}
